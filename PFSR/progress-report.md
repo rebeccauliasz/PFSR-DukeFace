@@ -16,7 +16,9 @@ It is difficult to locate a direct chain of cause and effect in this circulation
 
 I've decided on a 2 step method to process the MTMC dataset that will consist of first, hyper-resolving the images so that facial features are discernable, and second, extrapolating a 3D model from the processed images. My eventual goal is to 3D print these face objects in full color. 
 
-Step 1: I used Progressive Face Super-Resolution, a repository that uses Pytorch in order to super resolve facial features from low dimensional images. The model is trained on celebA, and is designed to reconstruct faces from images without distortion using a progressive training method that gradually increases image size. 
+#### Step 1: 
+
+I used Progressive Face Super-Resolution, a repository that uses Pytorch in order to super resolve facial features from low dimensional images. The model is trained on celebA, and is designed to reconstruct faces from images without distortion using a progressive training method that gradually increases image size. 
 
 In order to use this repository, I needed access to CUDA 9.0 or higher, so I learned how to use the Duke Computing Cluster's SLURM Queue. I sucessfully set up a conda environment to run the test images on the celebA data, but was running into problems when I tried to load in images from MTMC. I decided to try using Google Colab to more easily visualize the code exectution so that I could troubleshoot. I customized the Colab notebook provided by one of the authors of the PFSR repo. [https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/main.py] 
 
@@ -39,4 +41,10 @@ Test Results using MTMC Images:
 ![larger crop version](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/PFSR-MTMC/img/grid/0_predictedresults-1%203.png)
 
 These were fun to generate! I ended up with way too many usless iamges from all my testing. A few examples are uploaded in [https://github.com/rebeccauliasz/PFSR-DukeFace/tree/master/PFSR/PFSR-MTMC/img/grid]
+
+### Step 2: 
+
+I was skeptical at this point about whether the images I had generated in fact looked enough like faces to be properly processed by a network designed to generate 3D face objects from 2D images. I planned to use 3DDFA (Face Alignment in Full Pose Range: A 3D Total Solution)[https://github.com/cleardusk/3DDFA], a repo written using pytorch trained that makes use of models from the dlib library. 
+
+
 
