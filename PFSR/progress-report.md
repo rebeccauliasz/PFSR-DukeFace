@@ -46,6 +46,12 @@ These were fun to generate! I ended up with way too many usless iamges from all 
 
 I was skeptical at this point about whether the images I had generated in fact looked enough like faces to be properly processed by a network designed to generate 3D face objects from 2D images. I planned to use 3DDFA (Face Alignment in Full Pose Range: A 3D Total Solution)[https://github.com/cleardusk/3DDFA], a repo written using pytorch trained that makes use of models from the dlib library. This code can be modified to run on a CPU, so I made a conda env on my machine to set up testing. 
 
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/test/self.png) 
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/test/self_pose.jpg)
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/test/self_0_paf.jpg)
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/test/self_3DDFA.jpg) 
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/test/self_pncc.png)
+
 Once I got this working, I needed to preprocess the images I generated from the PFSR. The model had output grids, so I wrote a script to batch crop these into individual JPGs. [https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/img-crop-grid.py]
 
 
