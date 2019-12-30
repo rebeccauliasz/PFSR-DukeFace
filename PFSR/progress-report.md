@@ -22,6 +22,6 @@ In order to use this repository, I needed access to CUDA 9.0 or higher, so I lea
 
 This script essentially scales an image and processes it through a series of optimized tensors trained on celebA in order to output a higher dimensional and higher resolution image. Although it performs pretty well on images that are already relatively clear, my MTMC images were really blurry and needed to be preprocessed to crop specifically the part of the image where the face was located. I wrote a simple python script to batch crop the images, and selected the best ~200 to test. 
 
-As expected, 
+As expected, the PFSR model hallucinated a lot of information that doesnt remotely resemble a face from the MTMC data. I spent a long time tweaking the different parameters of the model, the number of iterations, and the dimensions of the images I fed in with not too much improvement. However, my goal was never to hallucinate realistic facial images, so I dont really care about this. It would be interesting in the future to attempt to train a model on custom data that would have a greater ability to generate more realistic faces from blurry or undiscernible pixel data. 
 
 
