@@ -51,7 +51,18 @@ I was skeptical at this point about whether the images I had generated in fact l
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/test/self_0_paf.jpg)
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/test/self_pncc.png)
 
-Once I got this working, I needed to preprocess the images I generated from the PFSR. The model had output grids, so I wrote a script to batch crop these into individual JPGs. [https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/img-crop-grid.py]
+Once I got this working, I needed to preprocess the images I generated from the PFSR. The model had output image grids, so I wrote a script to batch crop these into individual JPGs. [https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/img-crop-grid.py]
 
+Here's a sample of them. I generated a couple hundred:
+
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/18crop_0_crop.jpg)
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/34crop_0_crop.jpg) 
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/49crop_0_crop.jpg)
+
+I ran the script to process these images. The dlib model could not always recognize a face, and sometimes found faces where there weren't any: 
+
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/18crop_pose.jpg)
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/34crop_pose.jpg)
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/49crop_pose.jpg)
 
 
