@@ -21,6 +21,7 @@ Step 1: I used Progressive Face Super-Resolution, a repository that uses Pytorch
 In order to use this repository, I needed access to CUDA 9.0 or higher, so I learned how to use the Duke Computing Cluster's SLURM Queue. I sucessfully set up a conda environment to run the test images on the celebA data, but was running into problems when I tried to load in images from MTMC. I decided to try using Google Colab to more easily visualize the code exectution so that I could troubleshoot. I customized the Colab notebook provided by one of the authors of the PFSR repo. [https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/main.py] 
 
 CelebA Examples created using PFSR model on DCC: 
+
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/celebA/2_results.jpg)
 
 This script essentially scales an image and processes it through a series of optimized tensors trained on celebA in order to output a higher dimensional and higher resolution image. Although it performs pretty well on images that are already relatively clear, my MTMC images were really blurry and needed to be preprocessed to crop specifically the part of the image where the face was located. I wrote a simple python script to batch crop the images, and selected the best ~200 to test. [https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/img-crop.py]
@@ -28,6 +29,14 @@ This script essentially scales an image and processes it through a series of opt
 As expected, the PFSR model hallucinated a lot of information that doesnt remotely resemble a face from the MTMC data. I spent a long time tweaking the different parameters of the model, the number of iterations, and the dimensions of the images I fed in with not too much improvement. However, my goal was never to hallucinate realistic facial images, so I dont really care about this. It would be interesting in the future to attempt to train a model on custom data that would have a greater ability to generate more realistic faces from blurry or undiscernible pixel data. 
 
 Test Results using random images of me: 
+
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/results/cropy.png)
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/results/89866147-08ad-4fe2-8944-b5711f4ce480.png)
+
+Test Results using MTMC Images: 
+
+![closer crop version](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/PFSR-MTMC/img/test/0_predictedresults%203.png)
+![larger crop version](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/PFSR-MTMC/img/grid/0_predictedresults-1%203.png)
+
+These were fun to generate! I ended up with way too many usless iamges from all my testing. A few examples are uploaded in [https://github.com/rebeccauliasz/PFSR-DukeFace/tree/master/PFSR/PFSR-MTMC/img/grid]
 
