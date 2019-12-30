@@ -66,6 +66,14 @@ I ran the script to process these images. The dlib model could not always recogn
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/49crop_pose.jpg)
 
 Depth mask: 
+
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/18crop_depth.png)
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/34crop_depth.png)
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/49crop_depth.png)
+
+### to do: create a page w three.js for the obj models
+
+The results are weird, but I wish the model didnt attempt so hard to find an "accurate face" or could tolerate more distortion. I tried another model, found at (https://cvl-demos.cs.nott.ac.uk/vrn/) "3D Face Reconstruction from a Single Image", which uses CNN regression and tends to produce much more warped outputs. 
+
+
+
