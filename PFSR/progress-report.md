@@ -27,4 +27,7 @@ This script essentially scales an image and processes it through a series of opt
 
 As expected, the PFSR model hallucinated a lot of information that doesnt remotely resemble a face from the MTMC data. I spent a long time tweaking the different parameters of the model, the number of iterations, and the dimensions of the images I fed in with not too much improvement. However, my goal was never to hallucinate realistic facial images, so I dont really care about this. It would be interesting in the future to attempt to train a model on custom data that would have a greater ability to generate more realistic faces from blurry or undiscernible pixel data. 
 
+Test Results using random images of me: 
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/results/cropy.png)
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/results/89866147-08ad-4fe2-8944-b5711f4ce480.png)
 
