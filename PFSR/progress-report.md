@@ -21,7 +21,7 @@ Step 1: I used Progressive Face Super-Resolution, a repository that uses Pytorch
 In order to use this repository, I needed access to CUDA 9.0 or higher, so I learned how to use the Duke Computing Cluster's SLURM Queue. I sucessfully set up a conda environment to run the test images on the celebA data, but was running into problems when I tried to load in images from MTMC. I decided to try using Google Colab to more easily visualize the code exectution so that I could troubleshoot. I customized the Colab notebook provided by one of the authors of the PFSR repo. [https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/main.py] 
 
 CelebA Examples created using PFSR model on DCC: 
-!(https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/celebA/2_results.jpg)
+![https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/celebA/2_results.jpg]
 
 This script essentially scales an image and processes it through a series of optimized tensors trained on celebA in order to output a higher dimensional and higher resolution image. Although it performs pretty well on images that are already relatively clear, my MTMC images were really blurry and needed to be preprocessed to crop specifically the part of the image where the face was located. I wrote a simple python script to batch crop the images, and selected the best ~200 to test. [https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/PFSR/test/img-crop.py]
 
