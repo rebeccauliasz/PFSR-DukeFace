@@ -65,4 +65,7 @@ I ran the script to process these images. The dlib model could not always recogn
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/34crop_pose.jpg)
 ![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/49crop_pose.jpg)
 
-
+Depth mask: 
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/18crop_depth.png)
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/34crop_depth.png)
+![](https://github.com/rebeccauliasz/PFSR-DukeFace/blob/master/3DDFA/3DDFA-MTMC/49crop_depth.png)
