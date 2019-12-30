@@ -75,5 +75,7 @@ Depth mask:
 
 The results are weird, but I wish the model didnt attempt so hard to find an "accurate face" or could tolerate more distortion. I tried another model, found at (https://cvl-demos.cs.nott.ac.uk/vrn/) "3D Face Reconstruction from a Single Image", which uses CNN regression and tends to produce much more warped outputs. 
 
-
+### To Do: 
+# [checkbox:unchecked] make OBJ web page
+# [checkbox:unchecked] print 3D models
 
